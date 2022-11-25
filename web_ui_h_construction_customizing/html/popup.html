@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha512-3j3VU6WC5rPQB4Ld1jnLV7Kd5xr+cq9avvhwqzbH/taCRNURoeEpoPBK9pDyeukwSxwRPJ8fDgvYXd6SkaZ2TA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style type="">
+/*팝업창 css*/
+.notice{
+  border: 1px solid lightgray;
+  width:400px;
+  height:300px;
+  display: none;
+}
+</style>
+</head>
+<body>
+  <div class=noticepop>
+    <h2>남율건설 인재 채용</h2>
+    <p>남율건설에서 인재를 채용하고 있습니다.<br>
+    자세한 사항은 공지사항 참조 바랍니다.<br>
+    함께 남율건설을 이끌어갈 인재를 기다리고 있습니다.</p>
+    <div class="video">
+      <link rel="stylesheet" href="tubullar.html">
+    </div>
+    <input type="checkbox" id="notice-check" name="chkbox">
+    <label for="chkbox">하루동안 열지 않기</label>
+
+    <button id="notice-close">닫기</button> 
+  </div>
+
+<script type="text/javascript">
+  $(function(){ 
+    if($.cookie('smcookie')!='1111'){
+      $('.notice').show();
+    }
+  
+  })
+
+  $('#notice-close').click(function(){
+    
+    
+    
+    
+    if($('#notice-check').is(":checked")==true){ 
+      $.cookie("smcookie","1111",{expires:3 , path: '/' })
+    }
+    
+    $('.notice').css({'display':'none'}); 
+    
+  })  
+
+</script>
+
+</body>
+</html>

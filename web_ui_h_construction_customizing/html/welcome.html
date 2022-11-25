@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/jquery.bxslider.min.css">
+    <script src="../javascript/script.js"></script>
+    <script src="../javascript/jquery-1.12.3.js"></script>
+    <script src="../javascript/script.js" defer type="text/javascript"></script>
+    <script src="../javascript/jquery.bxslider.min.js"></script>
+    <script src="../javascript/jquery.parallax-scroll.min.js"></script>
+    <script src="../css/normalize.min.css"></script>
+    <script src="../javascript/jquery.cookie.js"></script>
+    <link rel="stylesheet" href="../css/welcom.css">
+    <style>
+        #map{margin-left: 30px;}
+    </style>
+
+</head>
+<body>
+   <div class="wrapper">
+    <header>
+        <!-- .top은 .logo와 .menu를 묶어줌 -->
+        <div class="top">
+            <div class="logo">
+                <a href="intro.html"><img src="../images/logo.png" alt="로고 이미지"></a>
+            </div>
+            <nav class="menu">
+                <ul class="navi">
+                    <li>
+                        <a href="#">회사소개</a>
+                        <ul class="submenu">
+                            <li><a href="parallax.html">인사말</a></li>
+                            <li><a href="vegas.html">회사이념</a></li>
+                            <li><a href="welcome.html">오시는길</a></li>
+                            <li><a href="tubullar.html">회사소개</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                    <a href="#">사업영역</a>
+                    <ul class="submenu">
+                        <li><a href="#">주택사업</a></li>
+                        <li><a href="#">건축사업</a></li>
+                        <li><a href="#">인테리어</a></li>
+                    </ul>
+                    </li>
+                    <li>
+                        <a href="#">입주정보</a>
+                        <ul class="submenu">
+                            <li><a href="#">입주단지</a></li>
+                            <li><a href="#">입주캘린더</a></li>
+                            <li><a href="#">입주모임</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">인재채용</a>
+                        <ul class="submenu">
+                            <li><a href="#">직무소개</a></li>
+                            <li><a href="#">채용공고</a></li>
+                            <li><a href="#">기술교육</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="maplist">
+        <div class="mapback">
+            <h1>대한민국을 대표하는 건설회사<br>
+                남율건설의 위치입니다.</h1>
+        </div>
+        <div class="maplogo">
+            <img src="../images/logo.png" alt="로고이미지"> 
+            <button class="naverlink">네이버 지도로 보기</button>
+        </div>
+        <div class="where">
+            우편번호 : 12580 <br>
+            주소 :경기도 양평군 양서면 국수역길 11
+        </div>
+        <div id="map" style="width:60%;height:350px;"></div>
+        <div id="clickLatlng"></div>
+
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=04ed4e58c6dc36cca3a4e11ae4b1e2ab" ></script>
+        <script>
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+            mapOption = { 
+                center: new kakao.maps.LatLng( 37.512564775153244, 127.40047137565271), // 지도의 중심좌표
+                level: 3 // 지도의 확대 레벨
+            };
+
+        var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+        // 지도를 클릭한 위치에 표출할 마커입니다
+        var marker = new kakao.maps.Marker({ 
+            // 지도 중심좌표에 마커를 생성합니다 
+            position: map.getCenter() 
+        }); 
+        // 지도에 마커를 표시합니다
+        marker.setMap(map);
+
+        // 지도에 클릭 이벤트를 등록합니다
+        // 지도를 클릭하면 마지막 파라미터로 넘어온 함수를 호출합니다
+        kakao.maps.event.addListener(map, 'click', function(mouseEvent) {        
+            
+            // 클릭한 위도, 경도 정보를 가져옵니다 
+            var latlng = mouseEvent.latLng; 
+            
+            // 마커 위치를 클릭한 위치로 옮깁니다
+            marker.setPosition(latlng);
+            
+
+            
+        });
+        </script>
+    </div>
+    
+
+
+    <footer>
+        <div class="copy">
+            COPYRIGHT ©	by WEBDESIGN. ALL RIGHTS RESERVED
+        </div>
+        <div class="site">
+            <div class="btmenu">
+                <!-- SVG이미지 메뉴리스트 옆에 에 적용 -->
+                <ul>
+                    <li><a href="#"><img class="buliding" src="../images/buliding.svg" alt=""width="20" height="20" >로그인</a></li>
+                    <li><a href="signup.html"><img class="buliding" src="../images/buliding.svg" alt=""width="20" height="20">회원가입</a></li>
+                    <li><a href="#"><img class="buliding" src="../images/buliding.svg" alt=""width="20" height="20">하단메뉴3</a></li>
+                </ul>
+            </div>
+            <div class="familysite">
+                <select name="sitelist">
+                    <option value="#">패밀리사이트1</option>
+                    <option value="#">패밀리사이트2</option>
+                    <option value="#">패밀리사이트3</option>
+                </select>
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>
+

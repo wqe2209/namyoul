@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tubular 플러그인 연습</title>
+    <link rel="stylesheet" href="../css/tb.css">
+</head>
+<body>
+    <div id="wrapper">
+        <a href="#" clss="tubular-play">재생</a>
+        <a href="#" clss="tubular-pause">일시정지</a>
+        <a href="#" clss="tubular-play">소리키우기</a>
+        <a href="#" clss="tubular-play">소리줄이기</a>
+        <a href="#" clss="tubular-play">소리끄기</a>
+        <button><a href="intro.html">메인페이지 가기</a></button>
+        
+
+    </div>
+    <script src="../javascript/jquery-1.12.3.js"></script>
+    <script src="../javascript/jquery.tubular.1.0.js"></script>
+    <script>
+    $('document').ready(function() {
+        var options = { videoId: 'wJDAMCCRRmk',mute:true };
+        $('#wrapper').tubular(options);
+        // f-UGhWj1xww cool sepia hd
+        // 49SKbS7Xwf4 beautiful barn sepia
+    });
+    </script>
+    
+</body>
+</html>

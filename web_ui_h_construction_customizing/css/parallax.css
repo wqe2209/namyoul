@@ -1,0 +1,70 @@
+@charset 'utf-8';
+
+*{
+    margin: 0 ;
+    padding: 0;
+}
+
+.container{
+    position: relative;
+    cursor: pointer;
+    min-height: 500px;
+    max-width:1000px ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    margin: 0;
+    /* background-color: antiquewhite; */
+}
+
+.wrapper , footer{
+    margin-left: 15%;
+}
+
+
+
+#ms1{
+    background-image: url('../images/parallaxbuilding1.jpg');
+}
+#ms2{
+    background-image: url('../images/parallaxbuilding2.jpg');
+}
+#ms3{
+    background-image: url('../images/parallaxbuilding3.jpg');
+}
+
+.bg-holder{
+    width: 100%;
+    height: 100%;
+}
+
+.container .content{
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+}
+
+.content h3{
+    font-family: '맑은 고딕';
+    color: black;
+    font-size: 65px;
+    text-align: left;
+    
+    margin-top: -200px;
+    
+}
+
+.content p{
+    margin-top: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+    line-height: 32px;
+    font-size: 24px;
+    text-align: left;
+    color: #fff;
+}
+

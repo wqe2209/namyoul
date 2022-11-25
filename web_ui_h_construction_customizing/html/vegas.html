@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../javascript/jquery-1.12.3.js"></script>
+    <script src="../javascript/vegas.min.js"></script>
+    <link rel="stylesheet" href="../css/vegas.min.css">
+    <link rel="stylesheet" href="../css/vg.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../javascript/script.js" defer type="text/javascript"></script>
+
+    <style>
+        body{
+            width: 1200px;
+            height: 800px;
+        }
+        footer{
+         margin-top: 100%;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <!-- .top은 .logo와 .menu를 묶어줌 -->
+            <div class="top">
+                <div class="logo">
+                    <a href="intro.html"><img src="../images/logo.png" alt="로고 이미지"></a>
+                </div>
+                <nav class="menu">
+                    <ul class="navi">
+                        <li>
+                            <a href="#">회사소개</a>
+                            <ul class="submenu">
+                                <li><a href="parallax.html">인사말</a></li>
+                                <li><a href="vegas.html">회사이념</a></li>
+                                <li><a href="welcome.html">오시는길</a></li>
+                                <li><a href="tubullar.html">회사소개</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                        <a href="#">사업영역</a>
+                        <ul class="submenu">
+                            <li><a href="#">주택사업</a></li>
+                            <li><a href="#">건축사업</a></li>
+                            <li><a href="#">인테리어</a></li>
+                        </ul>
+                        </li>
+                        <li>
+                            <a href="#">입주정보</a>
+                            <ul class="submenu">
+                                <li><a href="#">입주단지</a></li>
+                                <li><a href="#">입주캘린더</a></li>
+                                <li><a href="#">입주모임</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">인재채용</a>
+                            <ul class="submenu">
+                                <li><a href="#">직무소개</a></li>
+                                <li><a href="#">채용공고</a></li>
+                                <li><a href="#">기술교육</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    <div id="content">
+        <h1>
+            남율건설
+        </h1>
+        <p>
+            <strong>
+                <a href="http://vegas.jaysalvat.com"></a>
+            </strong>
+            건축 자재 하나까지 내것이라는 마음으로<br>
+            아름답고 튼튼하게
+        </p>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('body').vegas({
+            delay: 3000,    
+            slides: [
+            { src: '../images/building1.jpg' },
+            { src: '../images/building2.jpg' },
+            { src: '../images/building3.jpg' },
+            ]
+        });
+    });
+    </script>
+        <footer>
+            <div class="copy">
+                COPYRIGHT ©	by WEBDESIGN. ALL RIGHTS RESERVED
+            </div>
+            <div class="site">
+                <div class="btmenu">
+                    <!-- SVG이미지 메뉴리스트 옆에 에 적용 -->
+                    <ul>
+                        <li><a href="#"><img class="buliding" src="../images/buliding.svg" alt=""width="20" height="20">로그인</a></li>
+                        <li><a href="signup.html"><img class="buliding" src="../images/buliding.svg" alt=""width="20" height="20">회원가입</a></li>
+                        <li><a href="#"><img class="buliding" src="../images/buliding.svg" alt=""width="20" height="20">하단메뉴3</a></li>
+                    </ul>
+                </div>
+                <div class="familysite">
+                    <select name="sitelist">
+                        <option value="#">패밀리사이트1</option>
+                        <option value="#">패밀리사이트2</option>
+                        <option value="#">패밀리사이트3</option>
+                    </select>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>

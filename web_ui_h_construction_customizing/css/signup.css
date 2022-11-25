@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+.middle{
+    width: 1000px;
+    height: 800px;
+    background-color: #48487d;
+    border-bottom: 1px solid #fff;
+
+}
+
+.middle_header{
+    padding: 30px;
+    border-bottom: 1px solid #fff;
+    font-weight: bold;
+    
+}
+
+.h2signup{
+    color: #fff !important;
+}
+
+.signlist{
+    height: 75%;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 30px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+#sample4_extraAddress{
+    display: none;
+}
